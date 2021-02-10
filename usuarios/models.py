@@ -39,8 +39,6 @@ class CustomUser(AbstractBaseUser,PermissionsMixin):
     is_active = models.BooleanField(default= False)
     is_superuser = models.BooleanField(default= False)
     pub = models.DateField(auto_now_add= True)
-
     objects = UserManager ()
-
     USERNAME_FIELD = 'username'
     REQUIERED_FIELDS = ['email' ]
