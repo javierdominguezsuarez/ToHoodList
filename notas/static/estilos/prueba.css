@@ -52,21 +52,27 @@ header .add-task-box{
 }
 
 .input-task{
-    width: 400px;
-    height: 40px;
+    width: 300px;
+    padding: 15px;
     border-radius: 12px;
-    border: none;
+    border: 2px solid transparent;
 }
 
 .input-task::placeholder{
     font-size: 17px;
-    padding-left: 15px;
+}
+
+.input-task:focus{
+    border-radius: 12px;
+    border: 2px solid #234BF9;
+    transition: 0.25s all ease;
+    outline: none;
 }
 
 .add-button{
     margin-left: 30px;
     width: 125px;
-    height: 40px;
+    padding: 15px;
     border-radius: 12px;
     border: none;
     font-size: 17px;
@@ -78,8 +84,15 @@ header .add-task-box{
 .task-box{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 25px;
     border-top: 1px solid #6B7077;
+}
+
+.task-box div{
+    display: flex;
+    flex-direction: row;
 }
 
 .task-box:last-child{
@@ -90,6 +103,7 @@ header .add-task-box{
     list-style-type: none;
     color: #FFF;
     font-size: 17px;
+    margin-left: 15px;
 }
 
 .fa-check-circle, .fa-trash-alt{
@@ -97,12 +111,9 @@ header .add-task-box{
 }
 
 .fa-check-circle{
-
+    font-size: 20px;
 }
 
-.fa-trash-alt{
-    position:fixed;
-    right: 10px;
-}
+
 
 
