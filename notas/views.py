@@ -7,6 +7,7 @@ from rest_framework import permissions
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
+    print("Hello world")
     return render (request,"home.html",{'todos':Nota.objects.all()})
 
 class NotaViewSet (viewsets.ModelViewSet):

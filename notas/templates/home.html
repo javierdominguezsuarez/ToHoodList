@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
+    {% load static %}
     <head>
         <title>To Hood List</title>
         <script src="https://kit.fontawesome.com/bbe51b02f0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'prueba.css' %}" type="text/css" media="screen">
     </head>
     <body>
         <header>
             <div class = "header-box">
                 <h3>Day, Month</h3>
-                <a class = "incomplete-task" href = "">Incomplete Tasks</a>
-                <a class = "completed-task" href = "">Completed Tasks</a>
-                <p class = "tasks-actives">3 Active Tasks</p>
+                <a class = "incomplete-task" id = "incompleted-task" href = "">Incomplete Tasks</a>
+                <a class = "completed-task" id = "completed-task" href = "">Completed Tasks</a>
+            </div>
+            <div class = "subheader-box">
+                <p class = "tasks-actives-box">3 Active Tasks</p>
             </div>
             <div class = "add-task-box">
                 <input class = "input-task" text = "input" id = "input" placeholder = "Things to be done...">
@@ -19,12 +23,11 @@
         </header>
         <main>
             <ul class = "task-list">
-                <li class = "task-box">Tarea</li>
+                {% for x in todos %}
+                <i class = "fas fa-check-circle"></i>
+                <li class = "task-box">{{x.content}}</li>
                 <i class = "fas fa-trash-alt"></i>
-                <li class = "task-box">Tarea</li>
-                <i class = "fas fa-trash-alt"></i>
-                <li class = "task-box">Tarea</li>
-                <i class = "fas fa-trash-alt"></i>
+                {% endfor %}
             </ul>
         </main>
     </body>

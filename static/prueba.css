@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: #393F49;
+}
+
+header .header-box{
+    padding: 15px 30px 7px;
+    display: flex;
+    flex-direction: row;
+    color: #FFF;            
+}
+
+.header-box a{
+    position: absolute;
+    text-decoration: none;
+    color: #FFF;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+#incompleted-task{
+    right: 200px;
+}
+
+#completed-task{
+    right:40px;
+}
+
+.subheader-box{
+    display:flex;
+    padding
+}
+
+.tasks-actives-box{
+    
+}
