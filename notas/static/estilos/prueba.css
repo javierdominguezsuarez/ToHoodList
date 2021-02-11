@@ -5,17 +5,20 @@
 }
 
 body{
-    background: #5087e6;
+    background: #393F49;
+    margin: 15px;
 }
 
 header .header-box{
-    padding: 15px 30px 7px;
+    font-size: 20px;
+    padding: 15px 30px 2px;
     display: flex;
     flex-direction: row;
     color: #FFF;            
 }
 
 .header-box a{
+    
     position: absolute;
     text-decoration: none;
     color: #FFF;
@@ -24,10 +27,82 @@ header .header-box{
 }
 
 #incompleted-task{
-    right: 200px;
+    right: 250px;
+    
 }
 
 #completed-task{
-    right:40px;
+    right:60px;
+    color: #878585;
 }
+
+.subheader-box{
+    display: flex;
+}
+
+.subheader-box p{
+    font-size: 15px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    color: #878585;
+}
+
+header .add-task-box{
+    margin: 20px;
+}
+
+.input-task{
+    width: 400px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+}
+
+.input-task::placeholder{
+    font-size: 17px;
+    padding-left: 15px;
+}
+
+.add-button{
+    margin-left: 30px;
+    width: 125px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    background: #234BF9;
+    cursor: pointer;
+}
+
+.task-box{
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    border-top: 1px solid #6B7077;
+}
+
+.task-box:last-child{
+    border-bottom:1px solid #6B7077;
+}
+
+.task-content{
+    list-style-type: none;
+    color: #FFF;
+    font-size: 17px;
+}
+
+.fa-check-circle, .fa-trash-alt{
+    color: #6B7077;
+}
+
+.fa-check-circle{
+
+}
+
+.fa-trash-alt{
+    position:fixed;
+    right: 10px;
+}
+
 
