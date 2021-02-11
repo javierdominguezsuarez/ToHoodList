@@ -9,5 +9,6 @@ class Nota (models.Model):
     content = models.TextField(blank=False,null=False)
     pub = models.DateField(auto_now_add=True)
     hour = models.TimeField(auto_now_add=True)
+    complete = models.BooleanField(default=False)
     class Meta :
         ordering = ['-pub','-hour']
