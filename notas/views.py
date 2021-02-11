@@ -3,12 +3,12 @@ from notas.models import Nota
 from notas.serializers import NotaSerializer
 from django.shortcuts import render
 from rest_framework import viewsets
-from rest_framework import permissions
+from rest_framework import  permissions
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
     print("Hello world")
-    return render (request,"home.html",{'todos':Nota.objects.all()})
+    return render (request,"estilos/home.html",{'todos':Nota.objects.all()})
 
 class NotaViewSet (viewsets.ModelViewSet):
     serializer_class = NotaSerializer

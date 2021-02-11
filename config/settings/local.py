@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'notas',
     'rest_framework',
     'usuarios',
+    
 ]
 
 MIDDLEWARE = [
@@ -131,8 +132,7 @@ AUTH_USER_MODEL = 'usuarios.CustomUser'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    '/var/www/static/',
+    #'/var/www/static/',
 ]
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
