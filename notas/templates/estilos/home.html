@@ -5,7 +5,7 @@
     <head>
         <title>To Hood List</title>
         <script src="https://kit.fontawesome.com/bbe51b02f0.js" crossorigin="anonymous"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     </head>
     <body>
         <header>
@@ -18,22 +18,19 @@
                 <p class = "tasks-actives-box">3 Active Tasks</p>
             </div>
             <div class = "add-task-box">
-                <input class = "input-task" text = "input" id = "input" placeholder = "Things to be done...">
-                <button class = "add-button" text = "submit" value = "submit">Add Task</button>
+                <input id="input-task" class = "input-task" text = "input" id = "input" placeholder = "Things to be done...">
+                <button id="add-button" class = "add-button" text = "submit" value = "submit">Add Task</button>
             </div>
         </header>
         <main>
-            <ul class = "task-list">
-                {% for x in todos %}
-                <i class = "fas fa-check-circle"></i>
-                <li class = "task-box">{{x.content}}</li>
-                <i class = "fas fa-trash-alt"></i>
-                {% endfor %}
+            <ul id="task-list" class = "task-list">
+
             </ul>
         </main>
 
 
 
+        {% csrf_token %}
         <script src="{% static 'javascript/todo.js' %}" ></script>
 
     </body>
