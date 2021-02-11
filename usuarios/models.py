@@ -6,4 +6,3 @@ from django.contrib.auth.base_user import BaseUserManager, AbstractBaseUser
 class CustomUser(AbstractUser):
     pass
     
-    
