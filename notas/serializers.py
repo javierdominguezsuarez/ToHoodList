@@ -10,3 +10,4 @@ class NotaSerializer(serializers.ModelSerializer):
         if len(text)> MAX_LENGTH:
             raise serializers.ValidationError("No te pases escribiendo bro")
         return text
+    
