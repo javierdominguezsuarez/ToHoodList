@@ -23,8 +23,19 @@
             </div>
         </header>
         <main>
+<<<<<<< HEAD
             <ul id="task-list" class = "task-list">
 
+=======
+            <ul class = "task-list">
+                {% for x in todos %}
+                <div class = "task-box">
+                    <i class = "fas fa-check-circle"></i>
+                    <li class = "task-content">{{x.content}}</li>
+                    <i class = "fas fa-trash-alt"></i>
+                </div>
+                {% endfor %}
+>>>>>>> 1b3283d663f07bdd2362b58d0bc6cd91e0afd3d4
             </ul>
         </main>
 
