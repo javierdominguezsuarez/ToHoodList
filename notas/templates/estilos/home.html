@@ -24,17 +24,6 @@
         </header>
         <main>
             <ul id="task-list" class = "task-list">
-                {% for x in todos %}
-                <div class = "task-box" > <!-- display flex, direction : flex row,  justify content : space between , align-items: center -->
-                    <div> <!-- display flex, direction : flex row -->
-                        <i class = "fas fa-check-circle"></i>
-                        <li class = "task-content">{{x.content}}</li> <!-- margin-left : 10px --> 
-                    </div>
-
-                    
-                    <i class = "fas fa-trash-alt"></i>
-                </div>
-                {% endfor %}
             </ul>
         </main>
 

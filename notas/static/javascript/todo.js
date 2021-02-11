@@ -19,14 +19,19 @@ window.onload = async function(event){
    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value; 
    const container = document.getElementById("task-list")
 
-   //making first request to get all todos
-  const results = await axios.get("/v1/notas")
+    const loadAllTodos = async () => {
+      const results = await axios.get("/v1/notas")
 
+      results.data.map((x) => 
+        container.innerHTML += renderTodo(x)
+      )
+      
+    }
+    //making first request to get all todos
+
+    await loadAllTodos()
 
   //iterating throw all this todos 
-  results.data.map((x) => 
-    container.innerHTML += `<h1>${x.content}</h1>`
-  )
 
 
   console.log(results)
@@ -44,7 +49,7 @@ window.onload = async function(event){
 
       const lastInner = container.innerHTML
 
-      container.innerHTML = `<h1>${text}</h1>`  + lastInner
+      container.innerHTML = renderTodo(results.data)  + lastInner
 
       console.log(text)
     
@@ -53,13 +58,20 @@ window.onload = async function(event){
 
 }
 
+
 const renderTodo = (todo) => {
   const html =  
 
   `
+    <div class = "task-box" > <!-- display flex, direction : flex row,  justify content : space between , align-items: center -->
+        <div> <!-- display flex, direction : flex row -->
+            <i class = "fas fa-check-circle"></i>
+            <li class = "task-content">${todo.content}</li> <!-- margin-left : 10px --> 
+        </div>
 
-  hello
-
+        
+        <i class = "fas fa-trash-alt"></i>
+    </div>
 
   `
 
