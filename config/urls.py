@@ -18,7 +18,7 @@ from usuarios.views import LoginViewSet, RegisterViewSet
 from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
-from notas.views import NotaViewSet, home_view
+from notas.views import NotaViewSet,  home_view
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
@@ -29,15 +29,17 @@ routerDos = routers.SimpleRouter()
 routerDos.register('registro', RegisterViewSet, basename='auth_register')
 routerTres = routers.SimpleRouter()
 routerTres.register('login',LoginViewSet, basename= 'auth_login')
+
 api = [
     path('',include(router.urls)),
     path('',include(routerDos.urls)),
-    path('',include(routerTres.urls))
+    path('',include(routerTres.urls)),
 ]
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view,name = 'home'),
-    path('v1/',include(api))
+    path('v1/',include(api)),
+
 
 ] 
 if settings.DEBUG:

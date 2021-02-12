@@ -1,16 +1,8 @@
-
-
-
-
 window.onload = async function(event){
 
     /*
-
     onload():
-
     Executed when the screen is loaded
-
-
     */
 
 
@@ -100,17 +92,13 @@ const renderTodo = (todo) => {
   const html =  
   `
     <div class ="task-box" > <!-- display flex, direction : flex row,  justify content : space between , align-items: center -->
-
         <div> <!-- display flex, direction : flex row -->
             <i class = "fas fa-check-circle"></i>
             <li class = "task-content">${todo.content}</li> <!-- margin-left : 10px --> 
         </div>
-
         <i class = "fas fa-trash-alt" id="${todo.id}-todo-delete" ></i>
-
     </div>
   `
 
   return html
 }
-
