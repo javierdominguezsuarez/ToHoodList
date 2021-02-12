@@ -5,8 +5,9 @@ MAX_LENGTH = 500
 class NotaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Nota
-        fields = ['id','user','content','pub','hour']
+        fields = ['id','user','content','pub','hour','complete']
     def validate_content(self, text):
         if len(text)> MAX_LENGTH:
             raise serializers.ValidationError("No te pases escribiendo bro")
         return text
+    

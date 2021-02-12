@@ -3,7 +3,11 @@ from .models import CustomUser
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
+from django.contrib.auth import password_validation, authenticate
 
+# Django REST Framework
+from rest_framework import serializers
+from rest_framework.authtoken.models import Token
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
@@ -41,3 +45,16 @@ class RegisterSerializer(serializers.ModelSerializer):
         customUser.save()
 
         return customUser
+
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length = 40)
+    password = serializers.CharField(min_length=8, max_length=64)
+    def validate(self, data):
+        user = authenticate(username=data['username'], password=data['password'])
+        if user is  None:
+            raise serializers.ValidationError('No te registraste way')
+        self.context['user'] = user
+        return data
+    def create(self, data):
+        token, created = Token.objects.get_or_create(user=self.context['user'])
+        return CustomUser.objects.first(), token.key
