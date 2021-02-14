@@ -34,7 +34,7 @@ STATICFILES_DIRS = [
     #'/var/www/static/',
 ]
 
-STATIC_URL = "config/static/"
+STATIC_URL = 'http://thlbucket/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"config/static")
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
@@ -45,6 +45,6 @@ AWS_SECRET_ACCESS_KEY ='Wf7LsX7sc64X42DgyO/IN0BAkHJkMVuZFNOQrHZT'
 AWS_STORAGE_BUCKET_NAME = 'thlbucket'
 
 # Expires 20 years in the future at 8PM GMT
-#STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
 #STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
-#STATIC_S3_PATH = 'static/'
+STATIC_S3_PATH = 'static/'
