@@ -39,9 +39,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view,name = 'home'),
     path('login',login_view,name = 'login'),
-    path('v1/',include(api)),
-
-
+    path('v1/',include(api))
 ] 
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL)
+#if settings.DEBUG:
+    #urlpatterns += static(settings.STATIC_URL)
