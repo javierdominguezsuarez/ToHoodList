@@ -21,7 +21,7 @@ from django.urls import path
 from notas.views import NotaViewSet,  home_view
 from rest_framework import routers
 from django.conf import settings
-from django.conf.urls.static import static
+
 
 router = routers.SimpleRouter()
 router.register('notas', NotaViewSet,basename='Vistas de notas')

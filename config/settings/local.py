@@ -26,12 +26,12 @@ INSTALLED_APPS += [
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR , "notas/static/estilos"),
-    os.path.join(BASE_DIR , "notas/templates/estilos"),
-    os.path.join(BASE_DIR , "usuarios/static/estilos"),
-    os.path.join(BASE_DIR , "usuarios/templates/estilos")
+    os.path.join("notas/static/estilos"),
+    os.path.join("notas/templates/estilos"),
+    os.path.join("usuarios/static/estilos"),
+    os.path.join("usuarios/templates/estilos")
     #'/var/www/static/',
 ]
 
-STATIC_URL = os.path.join(BASE_DIR , "notas/static/estilos/")
+STATIC_URL = "config/static/"
 
