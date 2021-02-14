@@ -45,8 +45,6 @@ AWS_SECRET_ACCESS_KEY = os.getenv('Wf7LsX7sc64X42DgyO/IN0BAkHJkMVuZFNOQrHZT')
 AWS_STORAGE_BUCKET_NAME = os.getenv('thlbucket')
 
 # Expires 20 years in the future at 8PM GMT
-
-
-#STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
-#STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
-#STATIC_S3_PATH = 'static/'
+STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
+STATIC_S3_PATH = 'static/'
