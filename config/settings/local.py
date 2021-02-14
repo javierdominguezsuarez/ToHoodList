@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 from config.settings.base import *
 
-
+SECRET_KEY = 'qoowufju3bp*#r*!prrk=+61c(ii#woioe!@1i(p9wsk2kq5)h'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
