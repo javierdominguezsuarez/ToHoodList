@@ -8,6 +8,9 @@ django = "*"
 django-rest-framework = "*"
 django-filter = "*"
 django-url-filter = "*"
+dj-database-url = "*"
+gunicorn = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
