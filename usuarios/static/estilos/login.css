@@ -2,6 +2,7 @@ html, body{
     margin: 0;
     height: 100%;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 .container{
@@ -12,7 +13,14 @@ html, body{
 
 .left-box{
     background: #1F1D2B;
+    flex-grow: 1.5;
+    z-index: 50;
+}
+
+.right-box{
+    background: #082AB9;
     flex-grow: 1;
+    
 }
 
 .container-left{
@@ -80,6 +88,7 @@ html, body{
     color: #FFF;
     width: 200px;
     height: 30px;
+    outline: none;
 }
 
 .buttons-box p{
@@ -94,17 +103,16 @@ html, body{
     width: 200px;
     height: 30px;
     cursor: pointer;
+    outline: none;
 }
+
 
 h2{
     text-align: center;
     font-size: 35px;
 }
 
-.right-box{
-    background: #082AB9;
-    flex-grow: 1;
-}
+
 
 .container-right{
     height: 100%;
@@ -115,5 +123,102 @@ h2{
 
 .container-right div{
     display: inline-block;
+}
+
+h1{
     
+    z-index: 200;
+}
+
+.shape-container{
+    z-index: 10;
+}
+
+.shape1{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 500px;
+    right: 450px;
+}
+
+.shape2{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 400px;
+    right: 300px;
+}
+
+.shape3{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    top: 540px;
+    right: 330px;
+}
+
+
+.shape4{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 450px;
+    right: 200px;
+}
+
+.shape5{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 470px;
+    right: 50px;
+}
+
+.shape6{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 185px;
+    right: -30px;
+}
+
+.shape7{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 70px;
+    right: 50px;
+}
+
+
+.shape8{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: -40px;
+    right: 500px;
+}
+
+
+.shape9{
+    transform: rotate(90deg);
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 200px;
+    right: 520px;
+}
+
+
+.shape10{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 100px;
+    right: 300px;
+}
+
+.shapes{
+    width: 100%;
 }

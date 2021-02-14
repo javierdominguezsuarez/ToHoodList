@@ -5,7 +5,7 @@
 }
 
 body{
-    background: #393F49;
+    background: #1F1D2B;
     margin: 15px;
 }
 
@@ -72,7 +72,7 @@ header .add-task-box{
 
 .input-task:focus{
     border-radius: 12px;
-    border: 2px solid #234BF9;
+    border: 2px solid #082AB9;
     transition: 0.25s all ease;
     outline: none;
 }
@@ -85,18 +85,14 @@ header .add-task-box{
     border: none;
     font-size: 17px;
     color: #fff;
-    background: #234BF9;
+    background: #082AB9;
     cursor: pointer;
     transition: 0.2s font-size;
     
 }
 
 .add-button:hover{
-<<<<<<< HEAD
-    background: linear-gradient(to right bottom, #234Bf9, #0C94AD);
-=======
     background: linear-gradient(to right bottom, #234Bf9, #234Bf9 30%, #0A7285);
->>>>>>> 3dd6ccc7e80688a136c112881e602a698a49f47b
 }
 
 .add-button:focus{
