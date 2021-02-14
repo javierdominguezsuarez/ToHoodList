@@ -92,7 +92,7 @@ header .add-task-box{
 }
 
 .add-button:hover{
-    background: linear-gradient(to right bottom, #234Bf9, #0C94AD);
+    background: linear-gradient(to right bottom, #234Bf9, #234Bf9 30%, #0A7285);
 }
 
 .add-button:focus{
