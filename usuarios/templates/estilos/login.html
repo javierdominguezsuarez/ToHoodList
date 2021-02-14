@@ -3,31 +3,40 @@
     <head>
         <title>ToHoodList Log In</title>
         <script src="https://kit.fontawesome.com/bbe51b02f0.js" crossorigin="anonymous"></script>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'estilos/login.css' %}" type="text/css" media="screen">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
     </head>
     <body>
-        <div class = "left-box">
-            <div class = "container-left">
-                <div class = "header-left">
-                    <h2>Log In</h2>
-                </div>
-                <div class = "main-box">
-                    <div class = "input-box">
-                        <input id = "input-user" class = "input-user" text = "input" placeholder = "Introduzca su nombre de usuario">
-                    <input id = "input-password" class = "input-password" text = "input" placeholder = "Contraseña">
+        <div class = "container">
+            <div class = "left-box">
+                <div class = "container-left">
+                    <div class = "header-left">
+                        <h2>Log In</h2>
                     </div>
-                    <div class = "buttons-box">
-                        <button id="signin-button" class = "signin-button" text = "submit" value = "submit">Sign In</button>
-                        <p>¿No tienes cuenta?</p>
-                        <button id="register-button" class = "register-button" text = "submit" value = "submit">Regístrate aquí</button>
+                    <div class = "main-box">
+                        <div class = "input-box">
+                            <input id = "input-user" class = "input-user" text = "input" placeholder = "Introduzca su nombre de usuario">
+                            <input id = "input-password" class = "input-password" text = "input" placeholder = "Contraseña">
+                        </div>
+                        <div class = "buttons-box">
+                            <button id="signin-button" class = "signin-button" text = "submit" value = "submit">Sign In</button>
+                            <p>¿No tienes cuenta?</p>
+                            <button id="register-button" class = "register-button" text = "submit" value = "submit">Regístrate aquí</button>
+                        </div>
                     </div>
+                    
                 </div>
-                
+            </div>
+            <div class = "right-box">
+                <div class = "container-right">
+                    <div>
+                        <h1>Bienvenido a ToHoodList</h1>
+                    </div>
+                    
+                </div>
             </div>
         </div>
-        <div class = "right-box">
-            <div class = "container-left">
-                <h1>Bienvenido a ToHoodList</h1>
-            </div>
-        </div>
+        
     </body>
 </html>

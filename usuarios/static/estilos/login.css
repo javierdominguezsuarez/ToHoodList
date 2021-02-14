@@ -1,0 +1,119 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    color: #FFF;
+}
+
+.left-box{
+    background: #1F1D2B;
+    flex-grow: 1;
+}
+
+.container-left{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-left div{
+    padding: 10px;
+}
+
+.header-left{
+    
+    flex: 0.4;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+
+.main-box{
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input-box input{
+    background: #1F1D2B;
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid #3F4344;
+    color: #FFF;
+    
+}
+
+.input-box input:focus{
+    outline:none;
+    border-bottom: 2px solid #082AB9;
+    background: linear-gradient(to bottom, transparent, #181720);
+    color: #FFF;
+}
+
+.buttons-box{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin-button{
+    background:#082AB9;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    width: 200px;
+    height: 30px;
+}
+
+.buttons-box p{
+    font-size: 12px;
+}
+
+.register-button{
+    background:#1F1D2B;
+    border-radius: 12px;
+    border: 2px solid #082AB9;
+    color: #082AB9;
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.right-box{
+    background: #082AB9;
+    flex-grow: 1;
+}
+
+.container-right{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-right div{
+    display: inline-block;
+    
+}
