@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: #393F49;
+    margin: 15px;
+}
+
+header .header-box{
+    font-size: 20px;
+    padding: 15px 30px 2px;
+    display: flex;
+    flex-direction: row;
+    color: #FFF;            
+}
+
+.header-box a{
+    
+    position: absolute;
+    text-decoration: none;
+    color: #FFF;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.header-box a:hover{
+    font-size:20.5px;
+}
+
+#incompleted-task{
+    right: 250px;
+
+    
+}
+
+#completed-task{
+    right:60px;
+    color: #878585;
+}
+
+.subheader-box{
+    display: flex;
+}
+
+.subheader-box p{
+    font-size: 15px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    color: #878585;
+}
+
+header .add-task-box{
+    margin: 20px;
+}
+
+
+
+.input-task{
+    width: 300px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    font-size: 15px;
+}
+
+.input-task::placeholder{
+    font-size: 15px;
+}
+
+.input-task:focus{
+    border-radius: 12px;
+    border: 2px solid #234BF9;
+    transition: 0.25s all ease;
+    outline: none;
+}
+
+.add-button{
+    margin-left: 30px;
+    width: 125px;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    background: #234BF9;
+    cursor: pointer;
+    transition: 0.2s font-size;
+    
+}
+
+.add-button:hover{
+<<<<<<< HEAD
+    background: linear-gradient(to right bottom, #234Bf9, #0C94AD);
+=======
+    background: linear-gradient(to right bottom, #234Bf9, #234Bf9 30%, #0A7285);
+>>>>>>> 3dd6ccc7e80688a136c112881e602a698a49f47b
+}
+
+.add-button:focus{
+    outline: none;
+}
+.add-button:active{
+    font-size: 16px;
+    width: 125px;
+}
+
+.task-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-top: 1px solid #6B7077;
+}
+
+.task-box div{
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+}
+
+.task-box:last-child{
+    border-bottom:1px solid #6B7077;
+}
+
+.task-content{
+    list-style-type: none;
+    color: #FFF;
+    font-size: 17px;
+    margin-left: 15px;
+}
+
+.fa-check-circle, .fa-trash-alt{
+    color: #6B7077;
+    cursor: pointer;
+}
+
+.fa-check-circle{
+    font-size: 20px;
+}
+
+.fa-trash-alt{
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+    
+}
+
+.fa-trash-alt:hover{
+    font-size: 24px;
+    color: #99A0A9;
+}
+
+
