@@ -26,8 +26,12 @@ INSTALLED_APPS += [
 
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "notas/static",
+    BASE_DIR / "notas/templates",
+    BASE_DIR / "usuarios/static",
+    BASE_DIR / "usuarios/templates",
+
     #'/var/www/static/',
 ]
 
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
