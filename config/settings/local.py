@@ -26,13 +26,6 @@ INSTALLED_APPS += [
 
 
 
-STATICFILES_DIRS = [
-    os.path.join("notas/static/estilos"),
-    os.path.join("notas/templates/estilos"),
-    os.path.join("usuarios/static/estilos"),
-    os.path.join("usuarios/templates/estilos")
-    #'/var/www/static/',
-]
 
 STATIC_URL = 'http://thlbucket/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"config/static")
@@ -43,8 +36,8 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_ACCESS_KEY_ID ='AKIAXSHEATMS2F7OSY5R'
 AWS_SECRET_ACCESS_KEY ='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'
 AWS_STORAGE_BUCKET_NAME = 'thlbucket'
-
-# Expires 20 years in the future at 8PM GMT
+AWS_S3_REGION_NAME="eu-west-2"
+AWS_S3_HOST = "s3.eu-west-2.amazonaws.com"
 STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
 #STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
 STATIC_S3_PATH = 'static/'
