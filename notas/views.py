@@ -5,7 +5,6 @@ from rest_framework import viewsets
 from rest_framework import  permissions
 from rest_framework import filters
 def home_view(request, *args, **kwargs):
-    print("Hello world")
     return render (request,"estilos/home.html",{'todos':Nota.objects.all()})
 
 class NotaViewSet (viewsets.ModelViewSet):
