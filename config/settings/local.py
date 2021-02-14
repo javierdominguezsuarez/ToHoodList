@@ -34,4 +34,5 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = "config/static/"
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"config/static")
 
