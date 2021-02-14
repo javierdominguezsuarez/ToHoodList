@@ -8,6 +8,9 @@ from rest_framework import viewsets
 from django.shortcuts import render
 from rest_framework import permissions
 # Create your views here.
+def login_view(request, *args, **kwargs):
+    return render (request,"estilos/login.html")
+    
 class RegisterViewSet (viewsets.ModelViewSet):
     serializer_class = RegisterSerializer
     queryset = CustomUser.objects.all()

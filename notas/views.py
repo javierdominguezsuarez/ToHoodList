@@ -1,13 +1,8 @@
-
-from typing import Generic
 from notas.models import Nota
 from notas.serializers import NotaSerializer
 from django.shortcuts import render
-from rest_framework import generics, viewsets
+from rest_framework import viewsets
 from rest_framework import  permissions
-from rest_framework.decorators import action
-from rest_framework.response import Response
-from url_filter.integrations.drf import DjangoFilterBackend
 from rest_framework import filters
 def home_view(request, *args, **kwargs):
     print("Hello world")

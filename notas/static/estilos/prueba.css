@@ -26,8 +26,13 @@ header .header-box{
     text-align: center;
 }
 
+.header-box a:hover{
+    font-size:20.5px;
+}
+
 #incompleted-task{
     right: 250px;
+
     
 }
 
@@ -51,15 +56,18 @@ header .add-task-box{
     margin: 20px;
 }
 
+
+
 .input-task{
     width: 300px;
     padding: 15px;
     border-radius: 12px;
     border: 2px solid transparent;
+    font-size: 15px;
 }
 
 .input-task::placeholder{
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .input-task:focus{
@@ -79,6 +87,20 @@ header .add-task-box{
     color: #fff;
     background: #234BF9;
     cursor: pointer;
+    transition: 0.2s font-size;
+    
+}
+
+.add-button:hover{
+    background: linear-gradient(to right bottom, #234Bf9, #0C94AD);
+}
+
+.add-button:focus{
+    outline: none;
+}
+.add-button:active{
+    font-size: 16px;
+    width: 125px;
 }
 
 .task-box{
@@ -93,6 +115,7 @@ header .add-task-box{
 .task-box div{
     display: flex;
     flex-direction: row;
+    height: 24px;
 }
 
 .task-box:last-child{
@@ -108,12 +131,23 @@ header .add-task-box{
 
 .fa-check-circle, .fa-trash-alt{
     color: #6B7077;
+    cursor: pointer;
 }
 
 .fa-check-circle{
     font-size: 20px;
 }
 
+.fa-trash-alt{
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+    
+}
 
+.fa-trash-alt:hover{
+    font-size: 24px;
+    color: #99A0A9;
+}
 
 

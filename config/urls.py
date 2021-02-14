@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from config.settings.local import STATIC_URL
-from usuarios.views import LoginViewSet, RegisterViewSet
+from usuarios.views import LoginViewSet, RegisterViewSet, login_view
 from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
@@ -38,6 +38,7 @@ api = [
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view,name = 'home'),
+    path('login',login_view,name = 'login'),
     path('v1/',include(api)),
 
 
