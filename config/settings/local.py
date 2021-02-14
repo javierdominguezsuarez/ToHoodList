@@ -36,14 +36,14 @@ STATICFILES_DIRS = [
 STATIC_URL = "config/static/"
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"config/static")
 
-AWS_QUERYSTRING_AUTH = False
-AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+#AWS_QUERYSTRING_AUTH = False
+#AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+#AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+#AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
 
 # Expires 20 years in the future at 8PM GMT
 
 
-STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
-STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
-STATIC_S3_PATH = 'static/'
+#STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+#STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
+#STATIC_S3_PATH = 'static/'
