@@ -40,11 +40,11 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #AWS_QUERYSTRING_AUTH = False
-AWS_ACCESS_KEY_ID = os.getenv('AKIAXSHEATMS2F7OSY5R')
-AWS_SECRET_ACCESS_KEY = os.getenv('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')
-AWS_STORAGE_BUCKET_NAME = os.getenv('thlbucket')
+AWS_ACCESS_KEY_ID ='AKIAXSHEATMS2F7OSY5R'
+AWS_SECRET_ACCESS_KEY ='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'
+AWS_STORAGE_BUCKET_NAME = 'thlbucket'
 
 # Expires 20 years in the future at 8PM GMT
-STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
-STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
-STATIC_S3_PATH = 'static/'
+#STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+#STATIC_URL = 'http://%s.s3.amazonaws.com/static/' % AWS_STORAGE_BUCKET_NAME
+#STATIC_S3_PATH = 'static/'
