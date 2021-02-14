@@ -12,6 +12,8 @@ dj-database-url = "*"
 gunicorn = "*"
 psycopg2 = "*"
 django-s3-folder-storage = "*"
+django-storages = "*"
+boto3 = "*"
 
 [dev-packages]
 
