@@ -14,6 +14,7 @@ from config.settings.base import *
 DEBUG = False
 
 
+SECRET_KEY = os.getenv('SECRET_KEY')
 # Application definition
 
 INSTALLED_APPS += [
