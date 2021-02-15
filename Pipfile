@@ -10,12 +10,12 @@ django-filter = "*"
 django-url-filter = "*"
 dj-database-url = "*"
 gunicorn = "*"
-psycopg2 = "*"
 django-s3-folder-storage = "*"
 django-storages = "*"
 boto3 = "*"
 django-environ = "*"
 python-decouple = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
