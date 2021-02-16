@@ -6,7 +6,7 @@ from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth import password_validation, authenticate
 from django.core.mail import EmailMessage
-
+from django.template.loader import render_to_string
 # Django REST Framework
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
@@ -45,14 +45,22 @@ class RegisterSerializer(serializers.ModelSerializer):
         
         customUser.set_password(validated_data['password'])
         customUser.save()
+
+        body = render_to_string(
+            'estilos/email.html',{
+                'name':validated_data['first_name']
+            },
+        )
         email_message = EmailMessage(
             subject = 'Bienvenido a toHoodList',
-            body = 'Se ha registrado en toHoodList',
+            body = body,
             from_email=EMAIL_HOST_USER,
             to = [validated_data['email']]
 
         )
+        email_message.content_subtype = 'html'
         email_message.send()
+        
         return customUser
 
 class LoginSerializer(serializers.Serializer):
