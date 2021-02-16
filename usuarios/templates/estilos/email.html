@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <link rel="stylesheet" href="{% static 'estilos/email.css' %}" type="text/css" media="screen">
+    </head>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            height:100px;
+            display: flex;
+        }
+        .header-box{
+            background: #1F1D2B;
+            width: 100%;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+        .text-box{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .text-box p{
+            flex-wrap: wrap;
+            margin: 10px;
+            
+        }
+    </style>
+    <body>
+        <header>
+            <div class = "header-box">
+                
+            </div>
+        </header>
+        <div class = "text-box">
+            <p class = "main">Hola {{name}}, <br>Bienvenido a ToHood List, ya puedes administrar tus tareas fácilmente. 
+                Nos aseguraremos de que nuestros servicios le ayuden en su día a día.
+            </p>
+            <p class = "contact">
+                Si tiene alguna cuestión, problema o desea ponerse en contacto con nosotros no dude en
+                 enviar un mensaje a este email.
+            </p>
+            <p class="footer">
+                Muchas gracias por confiar en nosotros,
+                <br>ToHood List
+            </p>
+        </div>
+    </body>
+</html>
