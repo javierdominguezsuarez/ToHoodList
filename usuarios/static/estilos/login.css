@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%27');
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
 html, body{
     margin: 0;
     height: 100%;
@@ -13,13 +19,13 @@ html, body{
 
 .left-box{
     background: #1F1D2B;
-    flex-grow: 1.5;
+    width: 50%;
     z-index: 50;
 }
 
 .right-box{
     background: #082AB9;
-    flex-grow: 1;
+    width: 50%;
     
 }
 
@@ -30,17 +36,25 @@ html, body{
 }
 
 .container-left div{
-    padding: 10px;
+    padding: 5px;
 }
 
 .header-left{
-    
-    flex: 0.4;
+    flex: 0.5;
     display: flex;
     align-items: center;
     margin: auto;
+    margin-top: 40px;
+    padding: 0;
 }
 
+.logo{
+    width: 120px;
+}
+
+.subheader-left{
+    flex: 0.1;
+}
 
 .main-box{
     flex: 1;
@@ -118,107 +132,65 @@ h2{
     height: 100%;
     display:flex;
     align-items: center;
-    justify-content: center;
-}
-
-.container-right div{
-    display: inline-block;
-}
-
-h1{
     
-    z-index: 200;
+    flex-direction: column;
 }
 
-.shape-container{
-    z-index: 10;
+.header-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
-.shape1{
+
+.subheader-right{
+    flex: 1;
+}
+
+.notes-box{
+    flex: 1;
+}
+
+.shapes-box{
+    flex: 1;
+}
+
+.logosup{
+    width: 260px;
+}
+
+
+.main-note{
+    border-radius: 15.82px;
+    background: #FFF;
+    display: relative;
+    backdrop-filter: blur(9px);
+    
+}
+
+.text-box1{
+    display: inline-block;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tick-icon{
+    color: #0F0;
+    padding-left: 20px;
+    padding-right: 12px;
+}
+
+.hour-text{
+    color: #6271AE;
+    padding-left: 12px;
+    padding-right: 20px;
+}
+
+.text-box{
     position: absolute;
-    height: 60px;
-    width: 60px;
-    top: 500px;
-    right: 450px;
-}
-
-.shape2{
-    position: absolute;
-    height: 60px;
-    width: 60px;
-    top: 400px;
-    right: 300px;
-}
-
-.shape3{
-    position: absolute;
-    height: 70px;
-    width: 70px;
-    top: 540px;
-    right: 330px;
-}
-
-
-.shape4{
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    top: 450px;
-    right: 200px;
-}
-
-.shape5{
-    position: absolute;
-    height: 90px;
-    width: 90px;
-    top: 470px;
-    right: 50px;
-}
-
-.shape6{
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    top: 185px;
-    right: -30px;
-}
-
-.shape7{
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    top: 70px;
-    right: 50px;
-}
-
-
-.shape8{
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    top: -40px;
-    right: 500px;
-}
-
-
-.shape9{
-    transform: rotate(90deg);
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    top: 200px;
-    right: 520px;
-}
-
-
-.shape10{
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    top: 100px;
-    right: 300px;
-}
-
-.shapes{
-    width: 100%;
+    background: #FFF;
+    width: 50px;
 }
