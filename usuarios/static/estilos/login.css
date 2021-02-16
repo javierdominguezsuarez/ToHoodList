@@ -20,13 +20,12 @@ html, body{
 .left-box{
     background: #1F1D2B;
     width: 50%;
-    z-index: 50;
+    
 }
 
 .right-box{
     background: #082AB9;
-    width: 50%;
-    
+    width: 50%;  
 }
 
 .container-left{
@@ -132,7 +131,6 @@ h2{
     height: 100%;
     display:flex;
     align-items: center;
-    
     flex-direction: column;
 }
 
@@ -140,6 +138,7 @@ h2{
     flex: 1;
     display: flex;
     align-items: center;
+    padding-top: 30px;
 }
 
 
@@ -149,6 +148,8 @@ h2{
 
 .notes-box{
     flex: 1;
+    align-items: center;
+    padding-top: 70px;
 }
 
 .shapes-box{
@@ -161,11 +162,13 @@ h2{
 
 
 .main-note{
+    position: relative;
     border-radius: 15.82px;
-    background: #FFF;
+    background: #FFFFFF;
+    opacity: 79%;
     display: relative;
     backdrop-filter: blur(9px);
-    
+    z-index: 20;
 }
 
 .text-box1{
@@ -190,7 +193,51 @@ h2{
 }
 
 .text-box{
-    position: absolute;
-    background: #FFF;
-    width: 50px;
+    position: relative;
+    border-radius: 15.82px;
+    height: 45px;
+    margin: auto;
+}
+
+.text-box2{
+    top: -25px;
+    background: rgba(151, 167, 233, 0.59);
+    z-index: 15;
+    width: 250px;
+    backdrop-filter: blur(28.4811px);
+}
+
+.text-box3{
+    top: -50px;
+    background: rgba(115, 135, 220, 0.78);
+    z-index: 10;
+    width: 220px;
+    backdrop-filter: blur(25.3165px);
+}
+
+.text-box4{
+    top: -80px;
+    background: rgba(85, 110, 207, 0.72);
+    z-index: 5;
+    width: 180px;
+    backdrop-filter: blur(25.3165px);
+}
+
+.shape-box{
+    width: 100%;
+}
+
+.curve{
+    width: 100%;
+    color: #000;
+}
+
+@media (max-width: 600px){
+    .left-box{
+        width: 100% !important;
+    }
+
+    .right-box{
+        display: none;
+    }
 }
