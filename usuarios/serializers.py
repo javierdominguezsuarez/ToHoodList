@@ -45,6 +45,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         
         customUser.set_password(validated_data['password'])
         customUser.save()
+
         body = render_to_string(
             'estilos/email.html',{
                 'name':validated_data['first_name']
@@ -59,6 +60,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         )
         email_message.content_subtype = 'html'
         email_message.send()
+        
         return customUser
 
 class LoginSerializer(serializers.Serializer):

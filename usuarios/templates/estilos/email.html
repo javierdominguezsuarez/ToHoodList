@@ -7,50 +7,24 @@
 
         
     </head>
-    <style>
-        body{
-            margin: 0;
-        }
-        header{
-            height:100px;
-            display: flex;
-        }
-        .header-box{
-            background: #1F1D2B;
-            width: 100%;
-            flex-wrap: wrap;
-            flex-grow: 1;
-        }
-        .text-box{
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            
-        }
 
-        .text-box p{
-            flex-wrap: wrap;
-            margin: 10px;
-            
-        }
-    </style>
-    <body>
-        <header>
-            <div class = "header-box">
-                
+    <body style = "margin: 0;">
+        <header style = "display: flex; justify-content: center; width: 100%;">
+            <div class = "header-box" style = "background: #1F1D2B; justify-content: center; display: flex; padding: 10px; width: 100%; flex-wrap: wrap; flex-grow: 1">
+                <img src = "https://i.ibb.co/vXLD2sd/loggg.png">
             </div>
-        </header>
-        <div class = "text-box">
-            <p class = "main">Hola {{name}}, <br>Bienvenido a ToHood List, ya puedes administrar tus tareas fácilmente. 
+        </header style = "height: 100px; display: flex">
+        <div class = "text-box" style = "padding: 10px; display: flex; flex-direction: column">
+            <p class = "main" style = "flex-wrap: wrap; margin: 10px">Hola {{name}}, <br>Bienvenido a ToHood List, ya puedes administrar tus tareas fácilmente. 
                 Nos aseguraremos de que nuestros servicios le ayuden en su día a día.
             </p>
-            <p class = "contact">
+            <p class = "contact" style = "flex-wrap: wrap; margin: 10px">
                 Si tiene alguna cuestión, problema o desea ponerse en contacto con nosotros no dude en
-                 enviar un mensaje a este email.
+                 enviar un mensaje a este email: tweetteadevelop@gmail.com
             </p>
-            <p class="footer">
+            <p class="footer" style = "flex-wrap: wrap; margin: 10px">
                 Muchas gracias por confiar en nosotros,
-                <br>ToHood List
+                <br>ToHoodList
             </p>
         </div>
     </body>
