@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ToHoodList Log In</title>
+        <title>ToHoodList Sign In</title>
+        <meta name="author" content="José Ricardo Peña Seco, Javier Domínguez Suárez, Willy Escovilla y María Naranjo Almeida" />
         <meta charset = "utf8">
         <script src="https://kit.fontawesome.com/bbe51b02f0.js" crossorigin="anonymous"></script>
         {% load static %}
         <link rel="stylesheet" href="{% static 'estilos/signin.css' %}" type="text/css" media="screen">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="icon" href="/usuarios/static/estilos/logo_sup.svg">
+        <link rel="shortcut icon" type="image/svg" href="{% static 'estilos/logo.svg'%}">
     </head>
     <body>
         <div class="container">
-            <div class = "right">
-                <h1>Sign In</h1>
-                <input text = "input" placeholder="Introduzca correo electrónico">
-                <input text = "input" placeholder="Introduzca su nombre">
-                <input text = "input" placeholder="Introduzca sus apellidos">
-                <input text = "password" placeholder="Introduzca su contraseña">
-                <input text = "password" placeholder="Introduzca de nuevo la contraseña">
-            </div>
             <div class = "left">
-
+                <img src = "{% static 'estilos/logo.svg'%}" class = "logo" alt = "ToHoodList Icon">
+                <h1>Sign In</h1>
+                <form class = "formulario">
+                    <input text = "input" placeholder="Introduzca correo electrónico">
+                    <input text = "input" placeholder="Introduzca su nombre">
+                    <input text = "input" placeholder="Introduzca sus apellidos">
+                    <input type = "password" placeholder="Introduzca su contraseña">
+                    <input type = "password" placeholder="Introduzca de nuevo la contraseña">
+                    <button id = "btnAccept">Aceptar</button>
+                    <p>¿Ya tienes cuenta?</p>
+                    <button href = "/usuarios/estilos/login.html" id = "btnLogIn">Inicia Sesión</button>
+                </form>
+                
+            </div>
+            <div class = "right">
+                <h1 id = "welcome">Welcome to</h1>
+                <img src = "{% static 'estilos/logo_sup.svg'%}" class = "logo_right" alt = "ToHoodList Icon">
+                <div class="cuadrado">
+                    <p>Devolver el tupper a mamá</p>
+                </div>
             </div>
         </div>
     </body>
