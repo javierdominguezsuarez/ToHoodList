@@ -75,12 +75,8 @@ export default function PageNotes() {
             <main>
                 <ul id="task-list" className = "task-list" style={{marginTop: 20}}>
 
-
                     <Note id={1} complete={false} content="Matar a una madre inocente" onDelete={() => console.log("eliminar")} onCheck={() => console.log("checked")}></Note>
                     <Note id = {2} complete={true} content="Matar a una madre inocente" onDelete={() => console.log("eliminar")} onCheck={() => console.log("checked")}></Note>
-
-
-
 
                 </ul>
             </main>
