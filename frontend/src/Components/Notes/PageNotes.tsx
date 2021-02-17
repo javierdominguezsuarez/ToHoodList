@@ -1,10 +1,14 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 import apiTodo from '../../api/apiTodo';
+import AuthContext from '../../auth/context';
+import storage from '../../auth/storage';
 import CurrentDate from './General/CurrentDate';
 import Note from './General/Note';
 import Placeholder from './General/Placeholder';
 import logo from './logo.svg';
+import imagotipo from '../../Media/imagotipo.png'
 
 interface notas{
     complete : boolean,
@@ -23,6 +27,7 @@ export default function PageNotes() {
     const [todoList, setTodoList] = useState<notas[]>([])
     const [todo, setTodo] = useState<string>("")
     const time = new Date().toLocaleDateString()
+    const authContext = useContext(AuthContext);
 
     const BaseUrl = 'http://127.0.0.1:8000/v1/'
 
@@ -71,6 +76,12 @@ export default function PageNotes() {
 
     }
 
+    const unlog = async () => {
+        await storage.removeUser()
+        authContext.setUser(null)
+
+    }
+
     useEffect(() => {
 
         getTodoList()
@@ -103,12 +114,18 @@ export default function PageNotes() {
 
         <div className="body p-5" style={{padding: 10}}>
             <div>
-                <div className = "header-box" style={style.header}>
+                <div className = "header-box d-flex justify-content-between" style={style.header}>
                     <div>
                         <CurrentDate></CurrentDate>
+
                         <p style={{marginTop: 20, color:"grey", textAlign: "left"}} className = "tasks-actives-box">
                             {todoList.length} Active Tasks
                         </p>
+                    </div>
+
+                            <img width = {300} height={79} src={imagotipo}></img>
+                    <div>
+                        <h5 className="text-light" style={{cursor: "pointer"}} onClick={unlog}>Cerrar sesión</h5>
                     </div>
                 </div>
 
