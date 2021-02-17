@@ -20,6 +20,15 @@ DEBUG = True
 INSTALLED_APPS += [
 's3_folder_storage',
 'storages',
+'corsheaders',
+]
+
+MIDDLEWARE += [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
+]
+CORS_ALLOWED_ORIGINS = [
+    
 ]
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
