@@ -1,5 +1,7 @@
+from rest_framework.fields import SerializerMethodField
+from rest_framework.serializers import Serializer
 from notas.models import Nota
-from notas.serializers import NotaSerializer
+from notas.serializers import NotaCreateSerializer, NotaSerializer
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework import  permissions
@@ -9,7 +11,7 @@ def home_view(request, *args, **kwargs):
 
 class NotaViewSet (viewsets.ModelViewSet):
     serializer_class = NotaSerializer
-    authenticatedActions = []
+    authenticatedActions = ['create','update','partial_update','destroy']
     filter_backends = [filters.SearchFilter]
     search_fields = ['=complete']
     def get_permissions(self):
@@ -24,5 +26,10 @@ class NotaViewSet (viewsets.ModelViewSet):
             user = self.request.user
             return Nota.objects.filter( user = user)
         except:
-            return Nota.objects.all()
+            return []
 
+    def get_serializer_class(self, *args, **kwargs):
+        
+        if self.request.method == 'POST':
+            return NotaCreateSerializer
+        return super().get_serializer_class(*args, **kwargs)
