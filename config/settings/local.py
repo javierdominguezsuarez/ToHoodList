@@ -19,8 +19,10 @@ DEBUG = True
 
 INSTALLED_APPS += [
 's3_folder_storage',
-'storages'
+'storages',
 ]
+
+
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
