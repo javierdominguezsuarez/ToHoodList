@@ -45,7 +45,8 @@ class RegisterSerializer(serializers.ModelSerializer):
         
         customUser.set_password(validated_data['password'])
         customUser.save()
-
+        token, created = Token.objects.get_or_create(user = customUser)
+        print(token)
         body = render_to_string(
             'estilos/email.html',{
                 'name':validated_data['first_name']
@@ -61,7 +62,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         email_message.content_subtype = 'html'
         email_message.send()
         
-        return customUser
+        return customUser , token.key
 
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField(max_length = 40)
@@ -74,4 +75,5 @@ class LoginSerializer(serializers.Serializer):
         return data
     def create(self, data):
         token, created = Token.objects.get_or_create(user=self.context['user'])
+        print(self.context['user'])
         return CustomUser.objects.first(), token.key
