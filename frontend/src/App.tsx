@@ -3,15 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import PageNotes from './Components/Notes/PageNotes';
 import storage from './auth/storage';
-import Auth from './Components/Auth/Auth';
 import AuthContext from './auth/context';
+import AuthRoutes from './Components/Auth/AuthRoutes';
+import { BrowserRouter,     useHistory } from 'react-router-dom';
 
 function App() {
 
 
   const [ user, setUser ] = useState<string>();
 	const [ profile, setProfile ] = useState();
-
 	const [ loading, setLoading ] = useState(true);
 
 	const restoreUser = async () => {
@@ -32,23 +32,25 @@ function App() {
 
   return (
 
-    <div className="App">
-
-      <AuthContext.Provider value={{ user, setUser }}>
-        {
-          user ? 
-
-        <PageNotes></PageNotes>
-
-        :
-
-          <Auth></Auth>
+      <div className="App">
 
 
-        }
+          <AuthContext.Provider value={{ user, setUser }}>
+            {
+              user ? 
 
-        </AuthContext.Provider>
-    </div>
+            <PageNotes></PageNotes>
+
+            :
+
+              <AuthRoutes></AuthRoutes>
+
+            }
+
+            </AuthContext.Provider>
+
+
+      </div>
 
   );
 }
