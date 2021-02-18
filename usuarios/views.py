@@ -23,7 +23,7 @@ class RegisterViewSet (viewsets.ModelViewSet):
         user,token = serializer.save()
         data = {
                 'user': CustomUserSerializer(user).data,
-                'access_token': token,
+                'access_token': token,  
             }
         return Response(data, status=201)
 class LoginViewSet (viewsets.ModelViewSet):
